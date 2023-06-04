@@ -1,0 +1,270 @@
+* {
+    margin:0px;
+    padding: 0px;
+}
+.dark {
+    display: flex;
+    justify-content: center;
+}
+.dark-mode {
+    background-color: #181818;
+    color: white;
+    transition:all .6s linear;
+   
+    
+}
+.toque {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    cursor:pointer;
+    user-select: none;
+    
+}
+
+.switch {
+    --button-width: 3.5em;
+    --button-height: 2em;
+    --toggle-diameter: 1.5em;
+    --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+    --toggle-shadow-offset: 10px;
+    --toggle-wider: 3em;
+    --color-grey: #ccc;
+    --color-green: #4296f4;
+   }
+   
+   .slider {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    
+   }
+   
+   .slider::after {
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: #ffffff;
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider {
+    background-color: var(--color-green);
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+   }
+   
+   .switch input[type="checkbox"] {
+    display: none;
+   }
+   
+   .switch input[type="checkbox"]:active + .slider::after {
+    width: var(--toggle-wider);
+   }
+   
+   .switch input[type="checkbox"]:checked:active + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+   }
+   
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forn {
+    background-color: transparent;
+    height: 450px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+} 
+.account {
+    border-radius: 30px 0px 0px 30px;
+    height: 300px;
+    width: 200px;
+    background-color: #a50a66;
+    display: flex;
+    justify-content: center;
+}
+.icon img {
+    margin: 15px;
+    height: 120px;
+}
+.text {
+    text-align: center;
+}
+.text h2 {
+    font-family: 'Outfit';
+    color: #e6ecff;
+    padding-bottom: 25px;
+}
+.text h6 {
+    color: #ffffff; 
+    font-family: Arial, Helvetica, sans-serif;
+}   
+.text a {
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff; 
+    font-size: 18px;
+    border-bottom:1px solid #ffffff;
+}
+.formulario {
+    border-radius: 0px 30px 30px 0px;
+    background-color: #d961ba;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nome {
+    border-radius: 4px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    border:1px solid #a50a66;
+}
+.nome img {
+    height: 20px;
+    padding-right: 17px;
+}
+.nome input {
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 100px;
+    padding-right: 5px;
+}
+.senha {
+    border-radius: 4px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border:1px solid #a50a66;
+}
+.senha input {
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 100px;
+    padding-right: 5px;
+}
+.senha img {
+    height: 20px;
+    padding-right: 17px;
+}
+.senha .viewer {
+    cursor: pointer;
+}
+.butao {
+    height: 75px;
+    width: 200px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    
+}
+.butao input {
+    margin-right: 20px;
+    border: none ;
+    font-family: 'Outfit';
+    color: #7a2856;
+    font-weight: 900;
+    background-color: #231f20;
+    border-radius:30px;
+    height: 43px;
+    width:100px;
+    cursor: pointer;
+}
+@media only screen and (min-width:340px) and (max-width: 550px) {
+    .forn {
+        width: 315px;
+        height: 350px;
+    }
+    .account {
+        width: 140px;
+    }
+    .formulario {
+        width: 180px;
+    }
+}
+@media only screen and (max-width:320px) {
+    .forn {
+        width: 280px;
+    }
+    .formulario,
+    .con { 
+        width: 140px;
+    }
+    .butao {
+        display: flex;
+        justify-content: center;
+        width: 140px;
+    }
+    .butao input {
+       margin: 0px;
+    }
+    .nome,
+    .senha {
+        width: 133px;
+    }
+    .nome img ,
+    .senha img {
+        padding-right: 10px;
+    }
+    .nome input,
+    .senha input {
+        width: 90px;
+    }
+}
